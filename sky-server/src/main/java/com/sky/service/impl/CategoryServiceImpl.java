@@ -28,12 +28,18 @@ import java.util.List;
 @Slf4j
 public class CategoryServiceImpl implements CategoryService {
 
-    @Autowired
+
     private CategoryMapper categoryMapper;
-    @Autowired
+
     private DishMapper dishMapper;
-    @Autowired
+
     private SetmealMapper setmealMapper;
+
+    public CategoryServiceImpl(CategoryMapper categoryMapper, DishMapper dishMapper, SetmealMapper setmealMapper) {
+        this.categoryMapper = categoryMapper;
+        this.dishMapper = dishMapper;
+        this.setmealMapper = setmealMapper;
+    }
 
     /**
      * 新增分类
