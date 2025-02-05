@@ -29,3 +29,7 @@ replay_pid*
 *.class
 *Test.java
 **/test/
+
+# 忽略 Spring Boot 配置文件
+application-dev.yml
+application.yml
